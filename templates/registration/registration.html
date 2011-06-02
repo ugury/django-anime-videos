@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block title %}
+<title>Shinpaku - User Registration - Watch online anime videos</title>
+{% endblock%}
+
+{% block icerik %}
+
+<div class="registration">
+
+	<div class="konuicibaslik">User Registration</div>
+
+	<form method="post" action=".">{% csrf_token %}
+	    <div class="formlabel">
+			<div class="formlabel2"><label for="id_username">Username</label></div>
+		{{ form.username }}<span class="errorfixer"> {{ form.username.errors }}</span>
+	    </div>
+
+	    <div class="formlabel">
+			<div class="formlabel2"><label for="id_email">E-Mail</label></div>
+		{{ form.email }}<span class="errorfixer"> {{ form.email.errors }}</span>
+	    </div>
+
+	    <div class="formlabel">
+			<div class="formlabel2"><label for="id_password1">Password</label></div>
+		{{ form.password1 }}<span class="errorfixer"> {{ form.password1.errors }}</span>
+	    </div>
+
+	    <div class="formlabel">
+			<div class="formlabel2"><label for="id_password2">Password (again)</label></div>
+		{{ form.password2 }}<span class="errorfixer">{{ form.password2.errors }}</span>
+	    </div>
+	    <br />
+	    <input type="submit" value="register" />
+	</form>
+
+</div>
+{% endblock %}

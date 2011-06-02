@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+	
+		{% block tm %}
+			<meta name="description" content="watch {{anime.title}} anime episodes online" />
+			<meta name="keywords" content="anime,watch,online,episode,sub,english,manga,video,{{anime.title}}" />
+			<title>Watch {{anime.title}} Online - Watch online anime videos</title>
+		{% endblock %}
+		
+		{% block icerik%}
+			<div class="animemiz">
+				
+				<div class="resimvebilgiler">
+					<div class="animeresmi">
+						<img src="{{STATIC_URL}}anime_pics/{{anime.slug}}.jpg" width="396" />
+					</div>
+					
+					<div class="animebilgileri">
+						<div class="bslk">{{ anime.title }}</div>
+						<div class="ozet"><span>Summary :</span> {{ anime.summary }}</div>
+						<div class="episodes"><span>Episodes :</span> {{ anime.num_of_episodes }}</div>
+						<div class="agerating"><span>Age Rating :</span> {{ anime.age_rating }}</div>
+						<div class="durum"><span>Status :</span> {{ anime.status }}</div>
+						<div class="genres">
+							<span>Genres : </span>
+							{% for genre in anime.get_genres %}
+								<a href="#">{{ genre }}</a>
+							{% endfor %}
+						</div>
+						<div class="prods">
+							<span>Producers : </span>
+							{% for producer in anime.get_producers %}
+								<a href="#">{{ producer }}</a>
+							{% endfor %}
+						</div>
+						<div class="rating"><span>Rating :</span> {{ anime.average_score }}</div>
+						<div class="rating">
+							<form action="/vote/" method="POST">{% csrf_token %}
+								<input type="hidden" name="anime" value="{{anime.title}}">
+								<select name="score">
+									<option>1</option>
+									<option>2</option>
+									<option>3</option>
+									<option>4</option>
+									<option>5</option>
+									<option>6</option>
+									<option>7</option>
+									<option>8</option>
+									<option>9</option>
+									<option>10</option>
+								</select>
+								<input type="submit" value="vote" />
+							</form>
+						</div>
+					</div>
+				</div>
+				
+				<div class="animebolumleri">
+					{% for ep in anime.get_episode_list %}
+						<div><a href="{{ep.get_absolute_url}}">{{anime.title}} - Episode {{ ep.episode_num }}</a></div>
+					{% endfor %}
+				</div>
+				
+			</div>
+		{% endblock %}

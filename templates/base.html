@@ -1,0 +1,382 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<script type="text/javascript">
+function change1(){
+	document.getElementById("resim1").style.backgroundImage = "url({{STATIC_URL}}naruto1.jpg)";
+}
+function change2(){
+	document.getElementById("resim1").style.backgroundImage = "url({{STATIC_URL}}souleater1.jpg)";
+}
+function change3(){
+	document.getElementById("resim1").style.backgroundImage = "url({{STATIC_URL}}fatestaynight1.jpg)";
+}
+function change4(){
+	document.getElementById("resim1").style.backgroundImage = "url({{STATIC_URL}}kaicho1.jpg)";
+}
+function setbg(){
+	document.getElementById("resim1").style.backgroundImage = "url({{STATIC_URL}}naruto1.jpg)";
+}
+
+</script>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<link rel="shortcut icon" href="{{STATIC_URL}}favicon.ico" type="image/x-icon" />
+<meta name="google-site-verification" content="qfnnpnVSUeA0RPyi0i11dk1xUR-ZMFtWnHPuTJlJgSs" />
+{% block tm %}
+<meta name="description" content="Watch online anime episodes" />
+<meta name="keywords" content="anime,watch,online,episode,sub,english,manga,video,naruto,bleach,death note,full metal" />
+<title>Shinpaku - Watch online anime videos</title>
+{% endblock %}
+<style type="text/css">
+body { font-family: Verdana, sans-serif;text-align:center; background:orange;}
+
+input {background:#F2F7FA;}
+
+* {padding:0; margin:0; }
+.tumu {}
+.enustmenu {background:#fff; padding:3px 0; color:#eee; }
+.enustmenu ul li {display:inline;}
+.enustmenu ul {list-style:none;}
+.enustmenu ul li a {font-size:13px; text-decoration:none; color:#948B8B;}
+.enustmenu ul li a:hover {color:#000;}
+.enustmenu2 {width:920px;margin:0 auto;overflow:auto;}
+.enustmenu2 .sol {width:400px;float:left;text-align:left;}
+.enustmenu2 .allanimes {width:370px; float:left;}
+.enustmenu2 .sag {width:150px;float:right;text-align:right;}
+
+.allanimes {font-size:13px;}
+.allanimes option{font-size:12px; background:#eee;}
+.allanimes select {background:#eee;}
+.pickanime {margin:0 0 6px 0;}
+
+.genel {width:920px; margin:10px auto;text-align:left;}
+.sayfa {background:#fff;}
+
+.resimvebilgiler {width:920px; overflow:auto; }
+.animeresmi {width:398px; float:left; height:299px; margin:20px 20px 20px 20px;}
+.animeresmi img {border:1px solid #000;width:396px;height:297px;}
+.animebilgileri {width:460px; float:right; margin:20px 20px 0 0; font-size:13px;}
+.animebilgileri .bslk {font-size:16px; margin:0 0 8px 0;}
+.animebilgileri .ozet {font-size:13px; padding:0 0 3px 0;}
+.animebilgileri span {font-size:13px; color:orange;}
+.episodes {padding:4px 0;}
+.durum {padding:4px 0;}
+.prods {padding:4px 0;}
+.rating {padding:4px 0;}
+.rating form input{font-size:12px; border:1px solid #000; padding:2px;}
+
+.animebolumleri {margin:0 20px; padding:0 0 30px 0;}
+
+.ust {width:920px; overflow:hidden; background:#fff; padding:10px 0 0 0;}
+.ustsol {float:left; width:498px; }
+.ustsag {float:right; width:420px; }
+.welcome { margin:0 10px; padding:15px 0 8px 0;}
+.welcome div {font-size:12px; padding:3px 0;}
+.welcome .toshinpaku {font-size:17px; padding:6px 0;}
+
+.ensonvepopuleranimeler {background:#fff; width:920px; overflow:auto; padding: 20px 0 10px;}
+.ensonvepopuleranimelersol {width:470px; float:left; margin:0 20px 0 20px;}
+.ensonvepopuleranimelersol .bslk { border-bottom : 2px solid orange; color:orange; padding:0 0 8px 0; margin:0 0 6px 0;}
+.ensonvepopuleranimelersol .anime a {font-size:12px; color:#4F88B0;}
+.ensonvepopuleranimelersol .anime a:hover {color:#485E6E;}
+.ensonvepopuleranimelersol .anime {font-size:12px; padding:0 0 4px 0;}
+.anime span {font-size:11px;}
+.ensonvepopuleranimelersag {width:390px; float:right; margin:0 20px 0 0;}
+.ensonvepopuleranimelersag .bslk { border-bottom : 2px solid orange; color:orange; padding:0 0 8px 0; margin:0 0 6px 0;}
+.ensonvepopuleranimelersag .anime a {font-size:12px; color:#4F88B0;}
+.ensonvepopuleranimelersag .anime a:hover {color:#485E6E;}
+.ensonvepopuleranimelersag .anime {font-size:12px; padding:0 0 4px 0; width:390px; overflow:auto;}
+.ensonvepopuleranimelersag .anime .l {float:left; width:300px;}
+.ensonvepopuleranimelersag .anime .r {float:right; width:90px; text-align:right;}
+
+.klipvevideolar1 {background:#fff; width:920px; overflow:auto; padding:10px 0; color:#000;}
+.klipvevideolar1 div {font-size:12px; padding:8px 0;}
+.klipvevideolar1 .bslk {font-size:16px; color:orange; border-bottom:2px solid orange;}
+.klipvevideolar1sol {float:left; width:260px; margin:0 10px 0 10px;}
+.klipvevideolar1orta {float:left;width:270px; margin:0 30px 0 0;}
+.resimicin1 {width:180px; height:200px; float:left; margin:0 0 0 20px;}
+.resimicin2 { width:140px;height:200px; float:left;}
+.custom {margin:0 0 0 25px;}
+.custom a { color:orange; padding:2px ;}
+.custom a:hover {color:#fff; background:orange;}
+
+.logo {font-family:calibri;height:90px; width:920px; margin: 0 0 10px 0; overflow:auto;}
+.logo .arama {font-size:13px; width:350px; text-align:right; padding:8px 0; float:right;}
+.logo .arama input {font-size:12px; border:1px solid #000;}
+.logo .logo2 {font-size:35px; padding:0 0 0 0; width:560px; float:left;}
+.logo .logo2 span {font-size:15px;}
+.logo .logo2 div {padding:40px 0 0 15px;}
+.searchdivi {margin:0 0 4px 0;}
+
+.lpart {padding:0 0 10px 0;}
+
+#alt a{font-size:13px;}
+#alt {font-size:11px;}
+#alt .alt1{margin:30px 0 0 0;}
+#alt .alt2{margin:10px 0 30px 0;}
+
+.slide {width:450px;background:#fff;margin:20px 20px 0 20px; height:290px;}
+#resim1 {width:446px;background:#edd;height:223px;margin:0 2px 0 2px; }
+.resimler {width:450px;overflow:hidden;height:67px;padding:2px 0;}
+.minikresim {float:left;width:110px;height:54px;margin:0 0 0 2px;}
+
+.video {margin:0 0 20px 0;}
+.videos {text-align:center; padding:40px 0;}
+.episodebslk {font-size:18px; margin:0 0 20px 0;}
+.nextprev {margin:30px 0 0 0;}
+.nextprev a {font-size:13px;}
+
+.registration {padding:20px 30px;}
+.registration ul li {list-style:none;}
+.formlabel {font-size:13px; padding:10px 0;}
+.formlabel2 {padding:3px 0 6px;}
+.konuicibaslik {font-size:15px; padding:10px 0 10px; border-bottom: 2px solid #000;}
+.login {padding:20px 30px;}
+.errorfixer {font-size:12px;font-style:italic;}
+
+.vidtype {padding:0 0 8px 0; font-size:12px; font-style:italic;}
+
+.search {padding:15px 20px;}
+.results {padding:10px 0; font-size:13px;}
+.results .found {font-size:14px; padding:3px 0 10px 0;font-style:italic;}
+.results .bslk {margin:3px 0 8px 0;}
+.results .bslk a {font-size:13px;}
+.results .icerik { font-size:12px; font-style:italic;}
+.result {margin:10px 0;}
+.form {}
+.searchanime {padding:7px 0; font-size:14px;}
+
+.listbslk {font-size:18px; padding:20px 40px;}
+.listanime {margin:5px 0; padding:0 40px; font-size:13px;}
+.listanime a {font-size:13px; color:#B53A6D;}
+.listanime a:hover {color:#5C3F4B;}
+.listalt {height:18px;}
+
+.ustreklamalani {width:390px; height:190px; margin: 0 10px;}
+.extra {height:126px; border:2px solid orange; font-size:12px; margin:0 0 15px 0; background:#F5F5F5;}
+.extra .bslk {color:#fff; background:orange; padding:4px 5px 3px;}
+.extra .anime {width:386px; overflow:hidden;}
+.extra .anime .resim {width:112px; float:left; }
+.extra .anime img {height:80px; padding:11px 5px;}
+.extra .anime .icrk {width:268px; float:right; padding:9px 0 0 0;}
+.extra .anime .icrk div{padding:4px; font-size:12px;}
+.extra .anime .icrk a{color:#2E444D;}
+.extra .anime .icrk a:hover {color:#000;}
+
+.bygenre {border:2px solid orange; font-size:12px; height:60px;}
+.bygenre div{padding:3px 4px;}
+.quickfind {background:orange; color:#fff;}
+.genres select {font-size:11px; padding:2px 0;background:#fff; margin:0 8px;}
+.genres select option{font-size:11px; padding:0 3px;}
+.genres input {font-size:11px; background:#fff; padding:2px 3px; }
+.genres {background:#F5F5F5;}
+</style>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-23660795-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</head>
+<body onload="setbg()">
+
+<div class="tumu">
+
+	<div class="enustmenu">
+		<div class="enustmenu2">
+			<div class="sol">
+				<ul>
+					<li><a href="/">Home</a> - </li>
+					<li><a href="/anime-list/">Anime List</a> - </li>
+					<li><a href="/popular-animes/">Popular Animes</a></li>
+				</ul>
+			</div>
+			<div class="allanimes">
+				{% load latest %}
+				{% get_all_animes %}
+				<div class="anime">
+					<select name="forma" onchange="location = this.options[this.selectedIndex].value;">
+						<option value="#" selected="selected">Pick an anime</option>
+					{% for anime in all_animes %}
+						<option value="{{anime.get_absolute_url}}">{{anime.title}}</option>
+					{% endfor %}
+					</select>
+				</div>
+			</div>
+			<div class="sag">
+				<ul>
+					{% if user.is_authenticated %}
+					<li><a href="/profile"/>Profile</a> - </li>
+					<li><a href="/logout"/>Logout</a></li>
+					{% else %}
+					<li><a href="/login/">Login</a> / </li>
+					<li><a href="/register/">Register</a></li>
+					{% endif %}
+				</ul>
+			</div>
+		</div>
+	</div>
+	
+	<div class="genel">
+	
+		<div class="logo">
+			<div class="logo2">
+				<div>
+					Shinpaku
+					<span>Watch online anime episodes</span>
+				</div>
+			</div>
+			<div class="arama">
+				<form action="/search/" method="post">{% csrf_token %}
+					<div class="searchdivi"><input type="text" name="query" /></div>
+					<div><input type="submit" value="Search" /></div>
+				</form>
+			</div>
+		</div>
+		
+		<div class="sayfa">
+		{% block icerik %}
+			<div class="ust">
+			
+				<div class="ustsol">
+					<div class="slide">
+						<div id="resim1">
+							
+						</div>
+						<div class="resimler">
+							<div class="minikresim">
+								<img src="{{STATIC_URL}}naruto2.jpg" width="110" onclick="change1()" alt="Anime Naruto Preview" />
+							</div>
+							<div class="minikresim">
+								<img src="{{STATIC_URL}}souleater2.jpg" width="110"  onclick="change2()" alt="Anime Fate Stay Night Preview" />
+							</div>
+							<div class="minikresim">
+								<img src="{{STATIC_URL}}fatestaynight2.jpg" width="110"  onclick="change3()" alt="Anime Soul Eater Preview" />
+							</div>
+							<div class="minikresim">
+								<img src="{{STATIC_URL}}kaicho2.jpg" width="110"  onclick="change4()" alt="Anime Bleach Preview" />
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="ustsag">
+				
+					<div class="welcome">
+						<div class="toshinpaku">Welcome to Shinpaku.com!</div>
+						<div>You can watch your favorite animes here. Check all animes you can watch here : <a href="/anime-list/">Anime List</a></div>
+					</div>
+					
+					<div class="ustreklamalani">
+						<div class="extra">
+							<div class="bslk">Anime Of The Week</div>
+							<div class="anime">
+								<div class="resim"><img src="{{STATIC_URL}}anime_pics/ao-no-exorcist.jpg" /></div>
+								<div class="icrk">
+									<div><a href="/anime/20/ao-no-exorcist/">Ao No Exorcist</a></div>
+									<div>
+										Humans live in the world of Assiah, demons in Gehenna. The two dimensions are not meant to interfere with each other, but demons still...
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="bygenre">
+							<div class="quickfind">Quick Find</div>
+							<div class="genres">
+								<form action="/search/" method="post">{% csrf_token %}
+								<div class="searchdivi"><input type="text" name="query" size="20" />
+								<select>
+									<option>Action</option>
+									<option>Fantasy</option>
+									<option>Comedy</option>
+									<option>Romance</option>
+									<option>Mystery</option>
+									<option>Sci-Fi</option>
+									<option>Slice Of Life</option>
+								</select>
+								<input type="submit" value="Search" /></div>
+								</form>
+							</div>
+						</div>
+					</div>
+				
+				</div>
+			
+			</div>
+			
+			<div class="ensonvepopuleranimeler">
+			
+				<div class="ensonvepopuleranimelersol">
+					<div class="bslk">Latest Episodes</div>
+					{% load latest %}
+					{% get_latest_episodes %}
+					{% for episode in latest_episodes %}
+					<div class="anime"><a href="{{episode.get_absolute_url}}">{{episode.anime}} {{episode.episode_num}}</a> <span>{{episode.pub_date}}</span></div>
+					{% endfor %}
+				</div>
+				
+				<div class="ensonvepopuleranimelersag">
+					<div class="bslk">Top Rated Animes</div>
+					{% load latest %}
+					{% get_top_animes %}
+					{% for anime in top_animes %}
+					<div class="anime"><div class="l">{{forloop.counter}} - <a href="{{anime.get_absolute_url}}">{{anime.title}}</a></div> <div class="r">score: {{anime.average_score}}</div></div>
+					{% endfor %}
+				</div>
+			
+			</div>
+			
+			<div class="klipvevideolar1">
+			
+				<div class="resimicin1">
+					<img src="{{ STATIC_URL }}elric.png" alt="Anime short clips" />
+				</div>
+				
+				<div class="klipvevideolar1sol">
+					<div class="bslk">Anime Clips</div>
+					<div>You can watch lots of hand-picked short clips from many different animes</div>
+					<div class="custom">>> Go to <a href="#">Anime Clips</a></div>
+				</div>
+				
+				<div class="resimicin2">
+					<img src="{{ STATIC_URL }}k.png" alt="Anime videos made by members" />
+				</div>
+				
+				<div class="klipvevideolar1orta">
+					<div class="bslk">Member Videos</div>
+					<div>Check out the videos made by our members</div>
+					<div class="custom">>> Go to <a href="#">Member Videos</a></div>
+				</div>
+				
+			
+			</div>
+		{% endblock %}
+		</div>
+	
+	</div>
+
+	<div id="alt">
+		<div class="alt1">Some rights reserved @ Shinpaku.com 2011</div>
+		<div class="alt2">
+			<a href="#">Legal Disclaimer</a> - <a href="#">Contact Us</a> - <a href="#">Terms of Service</a> - <a href="/sitemap.xml">Sitemap</a>
+		</div>
+		<div class="alt2">
+			<a href="http://animetoplist.org/"><img src="http://atbtn.com/1534" alt="Streaming Naruto" /></a> &nbsp;&nbsp; <a href="http://www.anime-toplist.eu/"><img src="http://www.anime-toplist.eu/button.php?u=luterien" alt="Anime-Toplist.eu - Gather Anime Together" border="0" /></a>
+
+		</div>
+	</div>
+	
+</div>
+
+</body>
+</html>

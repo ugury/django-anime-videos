@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+		
+		{% block icerik%}
+			
+			<div class="listbslk">Anime List</div>
+			
+			{% for anime in animes %}
+				
+				<div class="listanime"><a href="{{anime.get_absolute_url}}">{{anime.title}}</a></div>
+				
+			{% endfor %}
+			
+			<div class="listalt">
+			</div>
+			
+		{% endblock %}

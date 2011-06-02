@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+		
+		{% block icerik%}
+			<div class="search">
+				<div class="form">
+					<div class="searchanime">Search an anime : </div>
+					<form action="." method="post">{% csrf_token %}
+						<input type="text" id="query" name="query" />
+						<input type="submit" value="search" />
+					</form>
+				</div>
+				
+				<div class="results">
+					{% if result %}
+						<div class="found">Results found :</div>
+						{% for anime in result %}
+							<div class="result">
+								<div class="bslk"><a href="{{anime.get_absolute_url}}">{{anime.title}}</a></div>
+								<div class="icerik">{{anime.summary|truncatewords:'30'}}</div>
+							</div>
+						{% endfor %}
+					{% else %}
+						<div class="found">No results found</div>
+					{% endif %}
+				</div>
+			</div>
+		{% endblock %}

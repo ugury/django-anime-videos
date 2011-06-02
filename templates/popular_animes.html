@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+		
+		{% block icerik%}
+			
+			<div class="listbslk">Most Popular Animes</div>
+			
+			{% for anime in animes %}
+				
+				<div class="listanime">{{forloop.counter}} - <a href="{{anime.get_absolute_url}}">{{anime.title}}</a></div>
+				
+			{% endfor %}
+			
+			<div class="listalt">
+			</div>
+			
+		{% endblock %}

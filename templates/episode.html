@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+		{% block tm %}
+			<meta name="description" content="watch {{anime.title}} anime episodes online" />
+			<meta name="keywords" content="anime,watch,online,{{anime.title}},episode,sub,english,manga,video" />
+			<title>Watch {{anime.title}} Online - Watch online anime videos</title>
+		{% endblock %}
+		
+		{% block icerik%}
+			<div class="videos">
+			
+				<div class="episodebslk"><a href="{{anime.get_absolute_url}}">{{ anime.title }}</a> - Episode {{ episode.episode_num }}</div>
+			
+				{% for link in links %}
+				<div class="video">
+					<div class="vidtype">{{link.type}}</div>
+					{{link.url|safe }}
+				</div>
+				{% endfor %}
+				
+				<div style="padding:0 10px;">
+				<iframe src="http://www.facebook.com/plugins/like.php?href=http://www.shinpaku.com{{ request.get_full_path }}" style="border:none; width:450px; height:80px"></iframe>
+				</div>
+				
+				<div class="nextprev">
+					{% if episode.get_prev %}
+					<< <a href="{{episode.get_prev.get_absolute_url}}">{{episode.get_prev}}</a>&nbsp;&nbsp;&nbsp;
+					{% endif %}
+					{% if episode.get_next %}
+					&nbsp;&nbsp;&nbsp;<a href="{{episode.get_next.get_absolute_url}}">{{episode.get_next}}</a> >>
+					{% endif %}
+				</div>
+
+				
+			</div>
+		{% endblock %}
